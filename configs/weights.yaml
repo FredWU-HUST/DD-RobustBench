@@ -1,0 +1,141 @@
+Path:
+
+############ CIFAR10 ############
+
+ - '../trained_models/cifar10_best.pt'
+
+ - '../trained_models/dc_cifar10_ipc1.pt'
+ - '../trained_models/dc_cifar10_ipc5.pt'
+ - '../trained_models/dc_cifar10_ipc10.pt'
+ - '../trained_models/dc_cifar10_ipc30.pt'
+ - '../trained_models/dc_cifar10_ipc50.pt'
+
+ - '../trained_models/dsa_cifar10_ipc1.pt'
+ - '../trained_models/dsa_cifar10_ipc5.pt'
+ - '../trained_models/dsa_cifar10_ipc10.pt'
+ - '../trained_models/dsa_cifar10_ipc30.pt'
+ - '../trained_models/dsa_cifar10_ipc50.pt'
+
+ - '../trained_models/dm_cifar10_ipc1.pt'
+ - '../trained_models/dm_cifar10_ipc5.pt'
+ - '../trained_models/dm_cifar10_ipc10.pt'
+ - '../trained_models/dm_cifar10_ipc30.pt'
+ - '../trained_models/dm_cifar10_ipc50.pt'
+
+ - '../trained_models/mtt_cifar10_ipc1.pt'
+ - '../trained_models/mtt_cifar10_ipc5.pt'
+ - '../trained_models/mtt_cifar10_ipc10.pt'
+ - '../trained_models/mtt_cifar10_ipc30.pt'
+ - '../trained_models/mtt_cifar10_ipc50.pt'
+
+
+############ CIFAR100 ############
+
+ - '../trained_models/cifar100_best.pt'
+
+ - '../trained_models/dc_cifar100_ipc1.pt'
+ - '../trained_models/dc_cifar100_ipc5.pt'
+ - '../trained_models/dc_cifar100_ipc10.pt'
+ - '../trained_models/dc_cifar100_ipc30.pt'
+ - '../trained_models/dc_cifar100_ipc50.pt'
+
+ - '../trained_models/dsa_cifar100_ipc1.pt'
+ - '../trained_models/dsa_cifar100_ipc5.pt'
+ - '../trained_models/dsa_cifar100_ipc10.pt'
+ - '../trained_models/dsa_cifar100_ipc30.pt'
+ - '../trained_models/dsa_cifar100_ipc50.pt'
+
+ - '../trained_models/dm_cifar100_ipc1.pt'
+ - '../trained_models/dm_cifar100_ipc5.pt'
+ - '../trained_models/dm_cifar100_ipc10.pt'
+ - '../trained_models/dm_cifar100_ipc30.pt'
+ - '../trained_models/dm_cifar100_ipc50.pt'
+
+ - '../trained_models/mtt_cifar100_ipc1.pt'
+ - '../trained_models/mtt_cifar100_ipc5.pt'
+ - '../trained_models/mtt_cifar100_ipc10.pt'
+ - '../trained_models/mtt_cifar100_ipc30.pt'
+ - '../trained_models/mtt_cifar100_ipc50.pt'
+
+
+############ TinyImageNet ############
+
+ - '../trained_models/tiny_best.pt'
+
+ - '../trained_models/dc_tiny_ipc1.pt'
+ - '../trained_models/dc_tiny_ipc5.pt'
+ - '../trained_models/dc_tiny_ipc10.pt'
+ - '../trained_models/dc_tiny_ipc30.pt'
+ - '../trained_models/dc_tiny_ipc50.pt'
+
+ - '../trained_models/dsa_tiny_ipc1.pt'
+ - '../trained_models/dsa_tiny_ipc5.pt'
+ - '../trained_models/dsa_tiny_ipc10.pt'
+ - '../trained_models/dsa_tiny_ipc30.pt'
+ - '../trained_models/dsa_tiny_ipc50.pt'
+
+ - '../trained_models/dm_tiny_ipc1.pt'
+ - '../trained_models/dm_tiny_ipc5.pt'
+ - '../trained_models/dm_tiny_ipc10.pt'
+ - '../trained_models/dm_tiny_ipc30.pt'
+ - '../trained_models/dm_tiny_ipc50.pt'
+
+ - '../trained_models/mtt_tiny_ipc1.pt'
+ - '../trained_models/mtt_tiny_ipc5.pt'
+ - '../trained_models/mtt_tiny_ipc10.pt'
+ - '../trained_models/mtt_tiny_ipc30.pt'
+ - '../trained_models/mtt_tiny_ipc50.pt'
+
+
+############ ImageNet ############
+
+ - '../trained_models/SRe2L/rn18_in_ipc1.pth.tar'
+ - '../trained_models/SRe2L/rn18_in_ipc5.pth.tar'
+ - '../trained_models/SRe2L/rn18_in_ipc10.pth.tar'
+ - '../trained_models/SRe2L/rn18_in_ipc30.pth.tar'
+ - '../trained_models/SRe2L/rn18_in_ipc50.pth.tar'
+
+
+############ ImageNet subset ############
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagenette_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagenette_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagenette_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagenette_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagenette_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imagenette.pt'
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagewoof_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagewoof_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagewoof_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagewoof_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagewoof_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imagewoof.pt'
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagefruit_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagefruit_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagefruit_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagefruit_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagefruit_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imagefruit.pt'
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagemeow_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagemeow_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagemeow_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagemeow_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagemeow_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imagemeow.pt'
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagesquawk_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagesquawk_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagesquawk_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagesquawk_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imagesquawk_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imagesquawk.pt'
+
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imageyellow_ipc1.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imageyellow_ipc5.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imageyellow_ipc10.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imageyellow_ipc30.pt'
+ - '../trained_models/MTT_ImageNet_Subset/convnetD5_MTT_imageyellow_ipc50.pt'
+ - '../trained_models/MTT_ImageNet_Subset/imageyellow.pt'
