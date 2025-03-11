@@ -3,14 +3,6 @@ __pycache__/
 /training_results/
 /data/
 *.sh
-configs/mobilenet_cifar10.yaml
-configs/mobilenet_cifar100.yaml
-configs/mobilenet_tiny.yaml
-configs/resnet18_cifar10.yaml
-configs/resnet18_cifar100.yaml
-configs/resnet18_tiny.yaml
-configs/vgg11_cifar10.yaml
-configs/vgg11_cifar100.yaml
-configs/vgg11_tiny.yaml
-configs/wrn_cifar10.yaml
-configs/wrn_cifar100.yaml
+*.yaml
+!params.yaml
+!weights.yaml

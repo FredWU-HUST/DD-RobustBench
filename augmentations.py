@@ -47,6 +47,7 @@ class EvaluatorUtils:
             self.brightness = 1.0
             self.saturation = 2.0
             self.contrast = 0.5
+            self.ratio_erasing = 0.4
 
     @staticmethod
     def custom_aug(images, args):
@@ -209,6 +210,7 @@ class EvaluatorUtils:
             'flip': [EvaluatorUtils.rand_flip],
             'scale': [EvaluatorUtils.rand_scale],
             'rotate': [EvaluatorUtils.rand_rotate],
+            'erasing': [EvaluatorUtils.rand_erasing],
         }
         if strategy == 'None' or strategy == 'none' or strategy == '':
             return x
@@ -356,6 +358,37 @@ class EvaluatorUtils:
         x = x * mask.unsqueeze(1)
         return x
 
+    def rand_erasing(x, param, mean=[0.4914, 0.4822, 0.4465]): # mean of cifar10
+        ratio = param.ratio_erasing
+        cutout_size = int(x.size(2) * ratio + 0.5), int(x.size(3) * ratio + 0.5)
+        EvaluatorUtils.set_seed_DiffAug(param)
+        offset_x = torch.randint(0, x.size(2) + (1 - cutout_size[0] % 2), size=[x.size(0), 1, 1], device=x.device)
+        EvaluatorUtils.set_seed_DiffAug(param)
+        offset_y = torch.randint(0, x.size(3) + (1 - cutout_size[1] % 2), size=[x.size(0), 1, 1], device=x.device)
+        if param.Siamese:  # Siamese augmentation:
+            xxx = offset_x[0].clone()
+            offset_x[:] = xxx
+            yyy = offset_y[0].clone()
+            offset_y[:] = yyy
+            # offset_x[:] = offset_x[0]
+            # offset_y[:] = offset_y[0]
+        grid_batch, grid_x, grid_y = torch.meshgrid(
+            torch.arange(x.size(0), dtype=torch.long, device=x.device),
+            torch.arange(cutout_size[0], dtype=torch.long, device=x.device),
+            torch.arange(cutout_size[1], dtype=torch.long, device=x.device),
+        )
+        grid_x = torch.clamp(grid_x + offset_x - cutout_size[0] // 2, min=0, max=x.size(2) - 1)
+        grid_y = torch.clamp(grid_y + offset_y - cutout_size[1] // 2, min=0, max=x.size(3) - 1)
+        mask = torch.ones(x.size(0), x.size(2), x.size(3), dtype=x.dtype, device=x.device)
+        mask[grid_batch, grid_x, grid_y] = 0
+        mask = mask.unsqueeze(1).repeat(1,3,1,1) # batch*3*32*32
+        mean_mask = torch.randn(mask.shape, device=x.device)
+        mean_mask[:, 0, :, :] = mean[0]
+        mean_mask[:, 1, :, :] = mean[1]
+        mean_mask[:, 2, :, :] = mean[2]
+        mean_mask = mean_mask * (1 - mask)
+        x = x * mask + mean_mask # fill cutout parts(0) with mean
+        return x
 
     @staticmethod
     def compute_std_mean(scores):

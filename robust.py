@@ -95,7 +95,7 @@ def main():
             model = get_network(args.model,channel,num_classes,im_size,parallel=True).to(device)
             weights = torch.load(path, map_location=device)
             if args.whole_model:
-                weights = weights['state_dict']
+                weights = weights['model']
             model.load_state_dict(weights)
             model = nn.DataParallel(model).cuda()
             model.eval()

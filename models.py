@@ -5,6 +5,9 @@ import torchvision.models as models
 import time
 from models_cifar import resnet18_cifar
 from wide_resnet import Wide_ResNet
+from vit_model import create_vit_model
+import timm
+import deit
 
 
 ''' Swish activation '''
@@ -598,7 +601,13 @@ def get_network(model, channel, num_classes, im_size=(32, 32),parallel=True,data
     elif model=='MobileNetV1' or model=='MobileNet':
         net = MobileNetV1(channel,num_classes)
 
+    elif model=="ViT":
+        net = create_vit_model(img_size=im_size[0],patch_size=4,embed_dim=384,depth=4,num_heads=8,mlp_ratio=1.0,representation_size=384,num_classes=num_classes,drop_ratio=0)
     
+    elif model=='DeiTBN':
+        net = timm.create_model('vit_tiny_patch16_224')
+        net = deit.replace_BN(net)
+
     else:
         net = None
         exit('unknown model: %s'%model)
