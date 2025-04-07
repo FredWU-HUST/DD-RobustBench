@@ -153,11 +153,14 @@ We referred to the code from the following repository:
 ## Citation
 
 ```
-@article{wu2024dd,
+@article{wu2025dd,
   title={DD-RobustBench: An Adversarial Robustness Benchmark for Dataset Distillation},
   author={Wu, Yifan and Du, Jiawei and Liu, Ping and Lin, Yuewei and Cheng, Wenqing and Xu, Wei},
-  journal={arXiv preprint arXiv:2403.13322},
-  year={2024}
+  journal={IEEE Transactions on Image Processing}, 
+  year={2025},
+  volume={34},
+  pages={2052-2066},
+  doi={10.1109/TIP.2025.3553786}
 }
 ```
 
